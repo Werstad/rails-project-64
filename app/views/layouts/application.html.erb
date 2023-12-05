@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <title>RailsProject64</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -11,6 +13,13 @@
   </head>
 
   <body>
+    <ul>
+      <li><%= link_to 'Home', user_session_path %></li>
+      <li><%= link_to 'Sing up', new_user_registration_path %></li>
+      <%# BEGIN %>
+      <li><%= link_to 'Sing in', new_user_session_path %></li>
+      <%# END %>
+    </ul>
     <%= yield %>
   </body>
 </html>
