@@ -1,0 +1,33 @@
+doctype html
+html.h-100
+  head
+    title
+      | RailsProject64
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    meta[name="csrf-param" content="authenticity_token"]
+    p.notice
+      = notice
+    p.alert
+      = alert
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+  body.d-flex.flex-column.h-100
+    .container.mb-2
+      .d-flex.flex-wrap.align-items-center.py-2.border-bottom
+        .navbar.navbar-expand-md.navbar-light.me-auto
+          a.navbar-brand.me-md-4[href="/"]
+            img[width="30" src="/assets/hexlet_logo-8879f8eb9a4720c6157efe3095568a48a708608465a5fa58baa0c1d0c6e57c4f.jpg"]
+        ul.nav.nav-pills
+          li.nav-item.me-2
+            a.nav-link.link-dark[href="/users/sign_in"]
+            = link_to 'Sing in', new_user_session_path
+
+
+          li.nav-item.me-2
+            a.nav-link.link-dark[href="/users/sign_up"]
+            = link_to 'Sing up', new_user_registration_path
+    .container.my-4
+
+    = yield
