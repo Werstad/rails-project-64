@@ -7,9 +7,9 @@ ruby '3.1.2'
 gem 'devise'
 gem 'rails', '~> 7.0.8'
 gem 'rubocop-rails', require: false
-
+gem 'faker'
 gem 'minitest-power_assert'
-
+gem 'simple_form'
 gem 'sentry-rails'
 gem 'sentry-ruby'
 gem 'slim_lint'
@@ -60,7 +60,6 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'faker'
   gem 'sqlite3', '~> 1.4'
 end
 
